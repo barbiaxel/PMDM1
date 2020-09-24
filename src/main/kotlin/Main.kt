@@ -5,7 +5,8 @@ fun main() {
     printStringLength("This is a test")
     printStringLength(null)
     //println("Concatenation: " + concatenate("hello", null))
-    println(exercise1())
+    exercise1()
+    exercise2()
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -20,7 +21,7 @@ fun exercise1(){
 }
 
 // TODO: 2.- Uncomment this function:
-/* fun exercise2() {
+fun exercise2() {
     var month = 1
     while(month != 0) {
         println("Enter the number of the month (0 to finish)")
@@ -32,9 +33,14 @@ fun exercise1(){
             // https://kotlinlang.org/docs/reference/control-flow.html
             // take into account that some months have 30, others 31 and one 28 or 29.
             // Invoke the function from main()
+            when (month){
+                1,3,5,7,8,10,12 -> println("Month " +monthStr+ " has 31 days")
+                4,6,9,11 -> println("Month " +monthStr+ " has 30 days")
+                else -> println("Month " +monthStr+ " has 28 or 29 days")
+            }
         }
     }
-} */
+}
 
 // TODO: 3 Write a function called exercise3()
 // that accepts a  number and returns a String
